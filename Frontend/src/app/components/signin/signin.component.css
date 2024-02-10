@@ -1,0 +1,22 @@
+.container{
+    /*bch tabda 9ad lpage */
+    height: 100%;
+    padding: 100px;
+    /* position: relative; */
+    background-image: url("/assets/images/cover.jpeg");
+    background-position: -50px;
+}
+
+.siginform{
+    height: 600px;
+    padding: 120px;
+    background-color: rgba(251, 251, 251, 0.908);
+ }
+
+.btn{
+    background-color: rgb(214, 184, 255);
+}
+.close{
+    color: rgb(255, 0, 0);
+}
+
