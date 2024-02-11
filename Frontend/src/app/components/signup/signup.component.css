@@ -1,9 +1,14 @@
-.container{
+.containerr{
    /*bch tabda 9ad lpage */
    height: 100%;
    padding: 100px;
    /* position: relative; */
-   background-image: url("/assets/images/cover.jpeg");
+   background-image: url("/assets/images/backgr.webp");
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 }
 
 .siginform{
@@ -11,12 +16,14 @@
    /* margin-top: 20px; */
    /* padding: 120px; */
    background-color: rgba(251, 251, 251, 0.908);
+   width: 70vw;
 }
 
-.btn{
-   background-color: rgb(214, 184, 255);
+.btn {
+   background-color: rgb(151 185 226);
 }
-.close{
-   color: rgb(255, 0, 0);
+
+.close {
+   color: #3d6995;
 }
 

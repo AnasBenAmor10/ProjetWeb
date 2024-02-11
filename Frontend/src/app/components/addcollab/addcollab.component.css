@@ -1,0 +1,37 @@
+.collab {
+  width: 140vh;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  height: 180px;
+  overflow-y: scroll;
+  margin-left: 10px;
+}
+
+.add-btn {
+  background-color: #c3b7e8;
+  border-radius: 4px;
+  margin: 5px;
+  width: 180px;
+
+}
+
+.collabs-container {
+  margin-top: 10px; 
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.user-details {
+  width: fit-content;
+  height: fit-content;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 2px;
+  background-color: rgb(212, 245, 252);
+  font-size: large;
+  border: solid 2px #cbf3f6;
+  margin-right: 10px; 
+  margin-bottom: 10px; 
+}

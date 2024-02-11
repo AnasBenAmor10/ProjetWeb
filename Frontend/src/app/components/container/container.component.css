@@ -1,0 +1,23 @@
+.main-container {
+  /* bch tabda kad lpage */
+  height: 100%;
+  margin: 0;
+}
+.tasks{
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+
+}
+.users{
+  transform: translate(13px,-10px);
+}
+
+h1 {
+  font-size: 4em;
+  color: #10002f; 
+  margin: 20px;
+  margin-left: 40%;
+}
+
