@@ -6,73 +6,73 @@
       <div class="example-container">
         <div *ngFor="let item of list.ala" cdkDrag [cdkDragData]="item" class="example-box ">
           <div>
-            <i class="label">Task Name: </i>
+            <i class="label">Name Client: </i>
             <h6 class="value">{{ item.titre }}</h6>
-            <i class="label">Task Description: </i>
+            <i class="label">Description: </i>
             <h6 class="value">{{ item.description }}</h6>
-            <i class="label">Task Owner: </i>
+            <i class="label">Owner: </i>
             <h6 class="value">{{ item.proprietaire }}</h6>
-            <i class="label">final date: </i>
+            <i class="label">date: </i>
             <h6 class="value">{{ item.date_fin | date:'yyyy-MM-dd' }}</h6>
           </div>
         </div>
       </div>
 
-      <div *ngIf="list.nom === 'Done'">
+      <div *ngIf="list.nom === 'Very Urgent'">
         <div class="input-group input-group-sm mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Task Title</span>
-          <input [(ngModel)]="newDoneTaskname"type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Name Client</span>
+          <input [(ngModel)]="newVeryUrgentname"type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </div>
         <div class="input-group input-group-sm mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Task Descripton</span>
-          <input [(ngModel)]="newDoneTaskdescrip"type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Descripton</span>
+          <input [(ngModel)]="newVeryUrgentdescrip"type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </div>
         <div class="input-group input-group-sm mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Task Owner username</span>
-          <input [(ngModel)]="newDoneTaskowner"type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Owner username</span>
+          <input [(ngModel)]="newVeryUrgentowner"type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </div>
         <div class="input-group input-group-sm mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Final Date</span>
-          <input [(ngModel)]="newDoneDate"type="date" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Date</span>
+          <input [(ngModel)]="newVeryUrgentDate"type="date" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </div>
         <button type="button" class="btn btn-secondary button"  (click)="adddDoneTasks()">Apply</button>
       </div>
-      <div *ngIf="list.nom === 'ToDo'">
+      <div *ngIf="list.nom === 'Normal'">
         <div class="input-group input-group-sm mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Task Title</span>
-          <input [(ngModel)]="newtodoTaskname"type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Name Client</span>
+          <input [(ngModel)]="newNormalname"type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </div>
         <div class="input-group input-group-sm mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Task Descripton</span>
-          <input [(ngModel)]="newtodoTaskdescrip"type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Descripton</span>
+          <input [(ngModel)]="newNormaldescrip"type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </div>
         <div class="input-group input-group-sm mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Task Owner username</span>
-          <input [(ngModel)]="newtodoTaskowner"type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Owner </span>
+          <input [(ngModel)]="newNormalowner"type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </div>
         <div class="input-group input-group-sm mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Final Date</span>
-          <input [(ngModel)]="newtodoDate"type="date" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Date</span>
+          <input [(ngModel)]="newNormalDate"type="date" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </div>
         <button type="button" class="btn btn-secondary button" (click)="adddToDoTasks()">Apply</button>
       </div>
 
-      <div *ngIf="list.nom === 'In Progress'">
+      <div *ngIf="list.nom === 'Urgent'">
         <div class="input-group input-group-sm mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Task Title</span>
-          <input [(ngModel)]="newinprogressTaskname"type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Name Client</span>
+          <input [(ngModel)]="newUrgentname"type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </div>
         <div class="input-group input-group-sm mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Task Descripton</span>
-          <input [(ngModel)]="newinprogressTaskdescrip"type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Descripton</span>
+          <input [(ngModel)]="newUrgentdescrip"type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </div>
         <div class="input-group input-group-sm mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Task Owner username</span>
-          <input [(ngModel)]="newinprogressTaskowner"type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Owner</span>
+          <input [(ngModel)]="newUrgentowner"type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </div>
         <div class="input-group input-group-sm mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Final Date</span>
-          <input [(ngModel)]="newinprogressDate"type="date" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Date</span>
+          <input [(ngModel)]="newUrgentDate"type="date" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </div>
         <button type="button" class="btn btn-secondary button" (click)="adddInprogressTasks()">Apply</button>
       </div>

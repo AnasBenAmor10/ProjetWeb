@@ -11,36 +11,36 @@ import { TaskaddService } from 'src/app/services/taskadd.service';
 })
 export class TasklistComponent implements OnInit {
   userDetails: { username: string } | null = null;
-  newDoneTaskname:string="";
-  newDoneTaskdescrip:string="";
-  newDoneTaskowner:string="";
-  newDoneDate:Date|undefined;
-  newtodoTaskname:string="";
-  newtodoTaskdescrip:string="";
-  newtodoTaskowner:string="";
-  newtodoDate:Date|undefined;
-  newinprogressTaskname:string="";
-  newinprogressTaskdescrip:string="";
-  newinprogressTaskowner:string="";
-  newinprogressDate:Date|undefined;
+  newVeryUrgentname:string="";
+  newVeryUrgentdescrip:string="";
+  newVeryUrgentowner:string="";
+  newVeryUrgentDate:Date|undefined;
+  newNormalname:string="";
+  newNormaldescrip:string="";
+  newNormalowner:string="";
+  newNormalDate:Date|undefined;
+  newUrgentname:string="";
+  newUrgentdescrip:string="";
+  newUrgentowner:string="";
+  newUrgentDate:Date|undefined;
 
   
-  todo: {id: number,etat: string,titre: string, description: string ,proprietaire: string,date_fin: Date }[]=[] ;
-  done: { id: number,etat: string,titre: string, description: string ,proprietaire: string,date_fin: Date}[]=[];
-  inprogress: { id: number,etat: string,titre: string, description: string ,proprietaire: string,date_fin: Date}[]=[];
+  Normal: {id: number,etat: string,titre: string, description: string ,proprietaire: string,date_fin: Date }[]=[] ;
+  VeryUrgent: { id: number,etat: string,titre: string, description: string ,proprietaire: string,date_fin: Date}[]=[];
+  Urgent: { id: number,etat: string,titre: string, description: string ,proprietaire: string,date_fin: Date}[]=[];
   alltasks: { id: number,etat: string,titre: string, description: string ,proprietaire: string,date_fin: Date}[]=[];
   constructor(private taskAddService:TaskaddService) { 
     
   }
  
   adddDoneTasks(): void {
-    if (this.newDoneTaskname.trim()!=="" && this.newDoneTaskdescrip.trim()!=="" && this.newDoneTaskowner.trim()!=="") {
+    if (this.newVeryUrgentname.trim()!=="" && this.newVeryUrgentdescrip.trim()!=="" && this.newVeryUrgentowner.trim()!=="") {
       this.taskAddService.addTask({
-        etat: "done",
-        titre: this.newDoneTaskname,
-        description: this.newDoneTaskdescrip,
-        proprietaire: this.newDoneTaskowner,
-        date_fin: this.newDoneDate,
+        etat: "Very Urgent",
+        titre: this.newVeryUrgentname,
+        description: this.newVeryUrgentdescrip,
+        proprietaire: this.newVeryUrgentowner,
+        date_fin: this.newVeryUrgentDate,
         username: this.userDetails.username
       }).subscribe(res => {
         this.taskAddService.getActiveUserDetails().subscribe(
@@ -49,7 +49,7 @@ export class TasklistComponent implements OnInit {
             this.taskAddService.getAllTasks(this.userDetails.username).subscribe(
               (res) => {
                 this.alltasks = res;
-                this.done.push(this.alltasks[this.alltasks.length-1]);
+                this.VeryUrgent.push(this.alltasks[this.alltasks.length-1]);
                 
               },
               (error) => {
@@ -63,22 +63,22 @@ export class TasklistComponent implements OnInit {
         );
         console.log(res);
       });
-      this.newDoneDate=undefined;
-      this.newDoneTaskname = "";
-      this.newDoneTaskdescrip = "";
-      this.newDoneTaskowner = "";
+      this.newVeryUrgentDate=undefined;
+      this.newVeryUrgentname = "";
+      this.newVeryUrgentdescrip = "";
+      this.newVeryUrgentowner = "";
       
     }
   }
   
   adddInprogressTasks():void{
-    if (this.newinprogressTaskname.trim() !== "" && this.newinprogressTaskdescrip.trim() !== "" && this.newinprogressTaskowner.trim() !== "") {
+    if (this.newUrgentname.trim() !== "" && this.newUrgentdescrip.trim() !== "" && this.newUrgentowner.trim() !== "") {
       this.taskAddService.addTask({
-        etat: "in progress",
-        titre: this.newinprogressTaskname,
-        description: this.newinprogressTaskdescrip,
-        proprietaire: this.newinprogressTaskowner,
-        date_fin: this.newinprogressDate,
+        etat: "Urgent",
+        titre: this.newUrgentname,
+        description: this.newUrgentdescrip,
+        proprietaire: this.newUrgentowner,
+        date_fin: this.newUrgentDate,
         username: this.userDetails.username
       }).subscribe(res => {
         this.taskAddService.getActiveUserDetails().subscribe(
@@ -88,7 +88,7 @@ export class TasklistComponent implements OnInit {
               (res) => {
                 this.alltasks = res;
                 this.alltasks = res;
-                this.inprogress.push(this.alltasks[this.alltasks.length-1]);
+                this.Urgent.push(this.alltasks[this.alltasks.length-1]);
               },
               (error) => {
                 console.error('Error fetching tasks:', error);
@@ -101,20 +101,20 @@ export class TasklistComponent implements OnInit {
         );
         console.log(res);
       });
-      this.newinprogressDate=undefined;
-      this.newinprogressTaskname = "";
-      this.newinprogressTaskdescrip = "";
-      this.newinprogressTaskowner = "";
+      this.newUrgentDate=undefined;
+      this.newUrgentname = "";
+      this.newUrgentdescrip = "";
+      this.newUrgentowner = "";
     }
   }
   adddToDoTasks():void{
-    if (this.newtodoTaskname.trim() !== "" && this.newtodoTaskdescrip.trim() !== "" && this.newtodoTaskowner.trim() !== "") {
+    if (this.newNormalname.trim() !== "" && this.newNormaldescrip.trim() !== "" && this.newNormalowner.trim() !== "") {
       this.taskAddService.addTask({
-        etat: "to do",
-        titre: this.newtodoTaskname,
-        description: this.newtodoTaskdescrip,
-        proprietaire: this.newtodoTaskowner,
-        date_fin: this.newtodoDate,
+        etat: "Normal",
+        titre: this.newNormalname,
+        description: this.newNormaldescrip,
+        proprietaire: this.newNormalowner,
+        date_fin: this.newNormalDate,
         username: this.userDetails.username
       }).subscribe(res => {
         this.taskAddService.getActiveUserDetails().subscribe(
@@ -123,7 +123,7 @@ export class TasklistComponent implements OnInit {
             this.taskAddService.getAllTasks(this.userDetails.username).subscribe(
               (res) => {
                 this.alltasks = res;
-                this.todo.push(this.alltasks[this.alltasks.length-1]);
+                this.Normal.push(this.alltasks[this.alltasks.length-1]);
               },
               (error) => {
                 console.error('Error fetching tasks:', error);
@@ -136,10 +136,10 @@ export class TasklistComponent implements OnInit {
         );
         console.log(res);
       });
-      this.newtodoDate=undefined;
-      this.newtodoTaskname = "";
-      this.newtodoTaskdescrip = "";
-      this.newtodoTaskowner = "";
+      this.newNormalDate=undefined;
+      this.newNormalname = "";
+      this.newNormaldescrip = "";
+      this.newNormalowner = "";
     }
   }
   ngOnInit(): void {
@@ -150,14 +150,14 @@ export class TasklistComponent implements OnInit {
           (res) => {
             this.alltasks = res;
             for (let task of this.alltasks) {
-              if (task.etat === 'done') {
-                this.done.push(task);
+              if (task.etat === 'Very Urgent') {
+                this.VeryUrgent.push(task);
               }
-              if (task.etat === 'to do') {
-                this.todo.push(task);
+              if (task.etat === 'Normal') {
+                this.Normal.push(task);
               }
-              if (task.etat === 'in progress') {
-                this.inprogress.push(task);
+              if (task.etat === 'Urgent') {
+                this.Urgent.push(task);
               }
             }
           },
@@ -187,9 +187,9 @@ export class TasklistComponent implements OnInit {
     }
   }
   lists = [
-    {ala:this.todo,nom:"ToDo"},
-    {ala:this.inprogress,nom:"In Progress"},
-    {ala:this.done,nom:"Done"},
+    {ala:this.Normal,nom:"Normal"},
+    {ala:this.Urgent,nom:"Urgent"},
+    {ala:this.VeryUrgent,nom:"Very Urgent"},
   ]
 
  
