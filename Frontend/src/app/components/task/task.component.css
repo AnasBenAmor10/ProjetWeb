@@ -1,7 +1,23 @@
 .main {
     /* background-image: url("/assets/images/cover.jpeg"); */
-    margin: 40px;
+    padding: 40px;
+    
   }
+  .main::before {
+      content: "";
+      background-color: #7aa3bb;
+      background-size: cover;
+      background-position: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      /* Assure que l'élément pseudo-élément est derrière le contenu */
+      pointer-events: none;
+      /* Permet aux événements de souris de passer à travers */
+    }
   
 
   /* Create a New Task Section */
@@ -10,7 +26,7 @@
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: -20px;
+    margin-top: -14px;
     
   }
   
@@ -56,10 +72,11 @@
   margin: 10px;
   overflow-y: scroll;
   height: 750px;
-  background-color: #fff;
+  background-color: #ffffffb3;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  overflow-y: hidden;
   }
   
   .fixed-title {

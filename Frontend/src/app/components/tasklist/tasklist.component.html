@@ -18,7 +18,7 @@
         </div>
       </div>
 
-      <div *ngIf="list.nom === 'Very Urgent'">
+      <div *ngIf="list.nom === 'Very Urgent'" class="cont">
         <div class="input-group input-group-sm mb-3">
           <span class="input-group-text" id="inputGroup-sizing-sm">Name Client</span>
           <input [(ngModel)]="newVeryUrgentname"type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
@@ -37,7 +37,7 @@
         </div>
         <button type="button" class="btn btn-secondary button"  (click)="adddDoneTasks()">Apply</button>
       </div>
-      <div *ngIf="list.nom === 'Normal'">
+      <div *ngIf="list.nom === 'Normal'" class="cont">
         <div class="input-group input-group-sm mb-3">
           <span class="input-group-text" id="inputGroup-sizing-sm">Name Client</span>
           <input [(ngModel)]="newNormalname"type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
@@ -57,7 +57,7 @@
         <button type="button" class="btn btn-secondary button" (click)="adddToDoTasks()">Apply</button>
       </div>
 
-      <div *ngIf="list.nom === 'Urgent'">
+      <div *ngIf="list.nom === 'Urgent'" class="cont">
         <div class="input-group input-group-sm mb-3">
           <span class="input-group-text" id="inputGroup-sizing-sm">Name Client</span>
           <input [(ngModel)]="newUrgentname"type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">

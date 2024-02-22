@@ -7,7 +7,7 @@
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
   border-radius: 30px;
-  background-color: rgb(255, 255, 255);
+  ;
 
 }
 .users{
@@ -17,7 +17,23 @@
 h1 {
   font-size: 4em;
   color: #10002f; 
-  margin: 20px;
-  margin-left: 40%;
+  /* margin: 20px; */
+  text-align: center;
+  padding: 20px;
 }
 
+.main::before {
+  content: "";
+  background-image: url("../../../assets/images/medicine-blue-background-flat-lay.jpg");
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  /* Assure que l'élément pseudo-élément est derrière le contenu */
+  pointer-events: none;
+  /* Permet aux événements de souris de passer à travers */
+}
