@@ -111,9 +111,6 @@ CREATE TABLE IF NOT EXISTS `tasksala` (
 -- Déchargement des données de la table `tasksala`
 --
 
-INSERT INTO `tasksala` (`id`, `etat`, `titre`, `description`, `proprietaire`, `date_fin`, `username`) VALUES
-(24, 'to do', 'kzrfb', 'zrfjh', 'zrf', '2024-01-02', 'aloulou');
-
 -- --------------------------------------------------------
 
 --

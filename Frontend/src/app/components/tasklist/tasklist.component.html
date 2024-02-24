@@ -12,8 +12,9 @@
             <h6 class="value">{{ item.description }}</h6>
             <i class="label">Secrétaire:</i>
             <h6 class="value">{{ item.proprietaire }}</h6>
-            <i class="label">date: </i>
-            <h6 class="value">{{ item.date_fin | date:'yyyy-MM-dd' }}</h6>
+            <i class="label">date:</i>
+            <h6 class="value">{{ item.date_fin | date:'yyyy-MM-dd HH:mm:ss' }}</h6>
+
           </div>
         </div>
       </div>
@@ -33,7 +34,7 @@
         </div>
         <div class="input-group input-group-sm mb-3">
           <span class="input-group-text" id="inputGroup-sizing-sm">Date</span>
-          <input [(ngModel)]="newVeryUrgentDateTime" type="datetime-local" class="form-control input"
+          <input [(ngModel)]="newVeryUrgentDate" type="datetime-local" class="form-control input"
             aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </div>
 
@@ -54,7 +55,7 @@
         </div>
         <div class="input-group input-group-sm mb-3">
           <span class="input-group-text" id="inputGroup-sizing-sm">Date</span>
-          <input [(ngModel)]="newNormalDateTime" type="datetime-local" class="form-control input"
+          <input [(ngModel)]="newNormalDate" type="datetime-local" class="form-control input"
             aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </div>
 
@@ -76,7 +77,7 @@
         </div>
         <div class="input-group input-group-sm mb-3">
           <span class="input-group-text" id="inputGroup-sizing-sm">Date</span>
-          <input [(ngModel)]="newUrgentDateTime" type="datetime-local" class="form-control input"
+          <input [(ngModel)]="newUrgentDate" type="datetime-local" class="form-control input"
             aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </div>
 
