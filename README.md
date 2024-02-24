@@ -19,7 +19,7 @@ The following software should be installed on your machine in order to reproduic
 ## How to run
 1. Move to frontend
 
-`cd Frontend`
+    `cd Frontend`
 
 2. Run it
 
@@ -29,6 +29,9 @@ The following software should be installed on your machine in order to reproduic
 
 
 4. Move to Backend
+   
+   `cd Backend`
+6. Start it
 
 `npm run dev `
 
