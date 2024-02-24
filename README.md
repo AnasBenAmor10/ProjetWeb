@@ -23,7 +23,7 @@ The following software should be installed on your machine in order to reproduic
 
 2. Run it
 
-`npm start  `
+    `npm start  `
 
 3. Start Apache and mySql in Xamp 
 
@@ -31,8 +31,9 @@ The following software should be installed on your machine in order to reproduic
 4. Move to Backend
    
    `cd Backend`
+   
 6. Start it
 
-`npm run dev `
+   `npm run dev `
 
 5. Open http://localhost:4200
