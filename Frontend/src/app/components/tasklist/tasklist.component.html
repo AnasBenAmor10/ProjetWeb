@@ -6,11 +6,11 @@
       <div class="example-container">
         <div *ngFor="let item of list.ala" cdkDrag [cdkDragData]="item" class="example-box ">
           <div>
-            <i class="label">Name Client: </i>
+            <i class="label">Name Patient: </i>
             <h6 class="value">{{ item.titre }}</h6>
             <i class="label">Description: </i>
             <h6 class="value">{{ item.description }}</h6>
-            <i class="label">Owner: </i>
+            <i class="label">Secrétaire:</i>
             <h6 class="value">{{ item.proprietaire }}</h6>
             <i class="label">date: </i>
             <h6 class="value">{{ item.date_fin | date:'yyyy-MM-dd' }}</h6>
@@ -18,9 +18,9 @@
         </div>
       </div>
 
-      <div *ngIf="list.nom === 'Very Urgent'" class="cont">
+      <div *ngIf="list.nom === 'P3: Traitement minimal'" class="cont">
         <div class="input-group input-group-sm mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Name Client</span>
+          <span class="input-group-text" id="inputGroup-sizing-sm">Name Patient</span>
           <input [(ngModel)]="newVeryUrgentname"type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </div>
         <div class="input-group input-group-sm mb-3">
@@ -28,18 +28,20 @@
           <input [(ngModel)]="newVeryUrgentdescrip"type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </div>
         <div class="input-group input-group-sm mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Owner username</span>
+          <span class="input-group-text" id="inputGroup-sizing-sm">Secrétaire</span>
           <input [(ngModel)]="newVeryUrgentowner"type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </div>
         <div class="input-group input-group-sm mb-3">
           <span class="input-group-text" id="inputGroup-sizing-sm">Date</span>
-          <input [(ngModel)]="newVeryUrgentDate"type="date" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+          <input [(ngModel)]="newVeryUrgentDateTime" type="datetime-local" class="form-control input"
+            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </div>
+
         <button type="button" class="btn btn-secondary button"  (click)="adddDoneTasks()">Apply</button>
       </div>
-      <div *ngIf="list.nom === 'Normal'" class="cont">
+      <div *ngIf="list.nom === 'P1: Traitement immédiat'" class="cont">
         <div class="input-group input-group-sm mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Name Client</span>
+          <span class="input-group-text" id="inputGroup-sizing-sm">Name Patient</span>
           <input [(ngModel)]="newNormalname"type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </div>
         <div class="input-group input-group-sm mb-3">
@@ -47,19 +49,21 @@
           <input [(ngModel)]="newNormaldescrip"type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </div>
         <div class="input-group input-group-sm mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Owner </span>
+          <span class="input-group-text" id="inputGroup-sizing-sm">Secrétaire </span>
           <input [(ngModel)]="newNormalowner"type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </div>
         <div class="input-group input-group-sm mb-3">
           <span class="input-group-text" id="inputGroup-sizing-sm">Date</span>
-          <input [(ngModel)]="newNormalDate"type="date" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+          <input [(ngModel)]="newNormalDateTime" type="datetime-local" class="form-control input"
+            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </div>
+
         <button type="button" class="btn btn-secondary button" (click)="adddToDoTasks()">Apply</button>
       </div>
 
-      <div *ngIf="list.nom === 'Urgent'" class="cont">
+      <div *ngIf="list.nom === 'P2: Traitement retardé'" class="cont">
         <div class="input-group input-group-sm mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Name Client</span>
+          <span class="input-group-text" id="inputGroup-sizing-sm">Name Patient</span>
           <input [(ngModel)]="newUrgentname"type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </div>
         <div class="input-group input-group-sm mb-3">
@@ -67,13 +71,15 @@
           <input [(ngModel)]="newUrgentdescrip"type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </div>
         <div class="input-group input-group-sm mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Owner</span>
+          <span class="input-group-text" id="inputGroup-sizing-sm">Secrétaire</span>
           <input [(ngModel)]="newUrgentowner"type="text" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </div>
         <div class="input-group input-group-sm mb-3">
           <span class="input-group-text" id="inputGroup-sizing-sm">Date</span>
-          <input [(ngModel)]="newUrgentDate"type="date" class="form-control input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+          <input [(ngModel)]="newUrgentDateTime" type="datetime-local" class="form-control input"
+            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </div>
+
         <button type="button" class="btn btn-secondary button" (click)="adddInprogressTasks()">Apply</button>
       </div>
 

@@ -187,10 +187,11 @@ export class TasklistComponent implements OnInit {
     }
   }
   lists = [
-    {ala:this.Normal,nom:"Normal"},
-    {ala:this.Urgent,nom:"Urgent"},
-    {ala:this.VeryUrgent,nom:"Very Urgent"},
-  ]
+    {ala:this.Normal,nom:"P1: Traitement immédiat"},
+    {ala:this.Urgent,nom:"P2: Traitement retardé"},
+    {ala:this.VeryUrgent,nom:"P3: Traitement minimal"},
+  ]
+  
 
  
 }
