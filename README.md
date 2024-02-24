@@ -13,6 +13,7 @@ The following software should be installed on your machine in order to reproduic
 
 - Angular Cli 8.1.3
 - Node : 14.15.1
+- Npm 6.14.8
 - Install Xamp
 - Open [localhost](http://localhost/phpmyadmin) and add the script sql manager_db-1.sql  
 
