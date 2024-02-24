@@ -31,12 +31,14 @@ The following software should be installed on your machine in order to reproduic
 
 3. Start Apache and mySql in Xamp
 
-4. Move to Backend
+### Open another terminal
+
+5. Move to Backend
 
    `cd Backend`
 
-5. Start it
+6. Start it
 
    `npm run dev `
 
-6. Open http://localhost:4200
+7. Open http://localhost:4200
