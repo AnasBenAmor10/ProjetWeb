@@ -53,6 +53,11 @@ app.post('/tasklist', async (req, res) => {
     res.status(500).send({ error: 'Internal Server Error' });
   }
 });
+// async function isDateAlreadySelected(date) {
+//   // Vérifiez si la date est déjà sélectionnée dans la base de données
+//   const [rows] = await db.query('SELECT * FROM selected_dates WHERE selected_date = ?', [date]);
+//   return rows.length > 0;
+// }
 
 app.post('/collab', async (req, res) => {
   db.query('SELECT username FROM active_user', async (error, usernameResults) => {

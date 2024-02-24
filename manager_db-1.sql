@@ -102,7 +102,7 @@ CREATE TABLE IF NOT EXISTS `tasksala` (
   `titre` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `description` text COLLATE utf8mb4_general_ci,
   `proprietaire` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `date_fin` date DEFAULT NULL,
+  `date_fin` dateTime DEFAULT NULL,
   `username` varchar(25) COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

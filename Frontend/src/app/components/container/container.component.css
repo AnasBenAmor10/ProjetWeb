@@ -12,6 +12,7 @@
 }
 .users{
   transform: translate(13px,-10px);
+  display: none;
 }
 
 h1 {
@@ -39,10 +40,3 @@ h1 {
   box-shadow: 0 0 0 100vh inset rgb(178 ,203,222 ,0.5);
 }
 
-.add-collab-container {
-  display: none;
-}
-
-.add-collab-container.show {
-  display: block;
-}

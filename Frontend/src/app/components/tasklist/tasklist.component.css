@@ -43,6 +43,7 @@
   font-size: 14px;
   width: 72%;
   margin-left: 55px;
+  margin-top: 10px;
 }
 .example-box:last-child {
   border-bottom-left-radius: 10px;

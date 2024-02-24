@@ -1,6 +1,6 @@
 .collab {
-  width: 140vh;
-  background-color: #ffffff;
+  width: 100vw;
+  background-color: #deedf8;
   padding: 20px;
   border-radius: 5px;
   height: 180px;
@@ -9,7 +9,7 @@
 }
 
 .add-btn {
-  background-color: #c3b7e8;
+  background-color: #8366dc;
   border-radius: 4px;
   margin: 5px;
   width: 180px;
