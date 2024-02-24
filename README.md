@@ -1,6 +1,4 @@
-# ProjetWeb
-
-# ProjetWeb
+# Emergency management system
 
 ## Our Solution
 Triage of patients in hospital emergency departments
