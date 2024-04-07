@@ -42,3 +42,8 @@ The following software should be installed on your machine in order to reproduic
    `npm run dev `
 
 7. Open http://localhost:4200
+### Contributors
+<a href="https://github.com/AnasBenAmor10/ProjetWeb/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=AnasBenAmor10/ProjetWeb" />
+</a>
+   
